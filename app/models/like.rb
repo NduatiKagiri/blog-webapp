@@ -1,4 +1,8 @@
 class Like < ApplicationRecord
-  has_one :user
-  has_one :post
+  belongs_to :user
+  belongs_to :post
+
+  def update_likes_counter
+    post.increment!(:likes_counter)
+  end
 end
