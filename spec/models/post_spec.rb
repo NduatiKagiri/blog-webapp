@@ -1,23 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe Post, type: :model do
+describe 'validations' do
   subject { Post.create(title: 'Post One', text: 'Text 1', author: User.new(name: 'John')) }
 
   before { subject.save }
 
-  it 'Title should not be blank' do
-    subject.title = nil
-    expect(subject).to_not be_valid
-  end
+  it { should validate_presence_of(:title) }
 
-  it 'Title should not exceed 250 characters' do
-    my_title = ''
-    251.times do
-      new_title.concat('p')
-    end
-    subject.title = my_title
-    expect(subject).to_not be_valid
-  end
+  it { should validate_length_of(:title).is_at_most(250) }
 
   it 'Comments counter should be equal to or greater than 0' do
     expect(subject.comments_counter).to be >= 0

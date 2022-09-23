@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Comment, type: :model do
+describe 'Validations' do
   first_post = Post.create(title: 'Post 1', author: User.create(name: 'John'))
   second_user = User.create(name: 'Nduati')
 

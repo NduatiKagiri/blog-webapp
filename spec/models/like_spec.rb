@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe Like, type: :model do
+describe 'validations' do
   first_post = Post.create(title: 'Post 1', author: User.create(name: 'John'))
   second_user = User.create(name: 'Nduati')
   subject { Like.create(author: second_user, post: first_post) }

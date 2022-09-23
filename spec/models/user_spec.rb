@@ -5,10 +5,7 @@ RSpec.describe User, type: :model do
 
   before { subject.save }
 
-  it 'name should be there' do
-    subject.name = nil
-    expect(subject).to_not be_valid
-  end
+  it { should validate_presence_of(:name) }
 
   it 'Posts counter should be equal to or greater than 0' do
     expect(subject.posts_counter).to be >= 0
