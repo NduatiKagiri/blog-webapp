@@ -1,24 +1,19 @@
-# README
+# Blog
+## 📑 Project description
+A blog web app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 🛠 Built with
+- Ruby
+- PostgreSQL
 
-Things you may want to cover:
+## 📺 Live Demo
+- N/A
 
-* Ruby version
+## 🤓 Authors
+**John Kagiri**
+- GitHub: [@NduatiKagiri](https://github.com/NduatiKagiri)
+- LinkedIn: [John Kagiri](https://www.linkedin.com/in/nduati-kagiri)
+- Twitter: [@NduatiKagiri](https://twitter.com/NduatiKagiri)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 📝License
+This project is [MIT](https://github.com/NduatiKagiri/blog-webapp/blob/dev/LICENSE) licensed.
