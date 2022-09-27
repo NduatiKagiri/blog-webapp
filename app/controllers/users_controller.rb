@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
-  def index
-    @heading = 'All Users'
-  end
+  def index; end
 
   def show; end
 end
