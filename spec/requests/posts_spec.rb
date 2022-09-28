@@ -25,7 +25,7 @@ RSpec.describe 'Posts', type: :request do
   describe 'GET /users/:id/posts/:id/' do
     before(:example) do
       post1 = Post.create(title: 'My Post 1', author: @user, text: 'This is post 1')
-      get "/users/#{@id}/posts/#{post.id}/"
+      get "/users/#{@id}/posts/#{post1.id}/"
     end
 
     it 'Returns request success' do
