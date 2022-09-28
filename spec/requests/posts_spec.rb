@@ -1,13 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
-  before(:each) do
-    @user = User.create(name: 'John')
-    @id = @user.id
-  end
-
-  describe 'GET /users/:id/posts/' do
-    before(:example) { get "/users/#{@id}/posts/" }
+  describe 'GET /posts/' do
+    before(:example) { get '/posts/' }
 
     it 'Returns request success' do
       expect(response).to have_http_status(:success)
@@ -22,11 +17,8 @@ RSpec.describe 'Posts', type: :request do
     end
   end
 
-  describe 'GET /users/:id/posts/:id/' do
-    before(:example) do
-      post1 = Post.create(title: 'My Post 1', author: @user, text: 'This is post 1')
-      get "/users/#{@id}/posts/#{post1.id}/"
-    end
+  describe 'GET /posts/show/' do
+    before(:example) { get '/posts/show/' }
 
     it 'Returns request success' do
       expect(response).to have_http_status(:success)
