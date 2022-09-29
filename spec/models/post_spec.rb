@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'validations' do
-  subject { Post.create(title: 'Post One', text: 'Text 1', author: User.new(name: 'John')) }
+  subject { Post.create(title: 'Post Two', text: 'Text 2', author: User.new(name: 'Nduati')) }
 
   before { subject.save }
 
@@ -27,7 +27,7 @@ describe 'validations' do
 
   it 'user_counter_updater to increase with increase in posts' do
     expect(subject.author.posts_counter).to be 1
-    Post.create(title: 'Post 2', author: subject.author)
+    Post.create(title: 'Post 3', text: 'Text 3', author: subject.author)
     expect(subject.author.posts_counter).to be 2
   end
 

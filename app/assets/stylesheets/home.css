@@ -1,0 +1,42 @@
+.users-home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.users-home li {
+  margin: 24px 145px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.users-home li img {
+  width: 15%;
+  height: 125px;
+}
+
+.users-home li .home-aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 18px 12px 10px 12px;
+  width: 80%;
+  border: 2px solid #262626;
+  border-radius: 4px;
+  margin-left: 5%;
+}
+
+.users-home li .home-aside h2 {
+  font-size: 32px;
+  line-height: 42px;
+  letter-spacing: 0.1em;
+  margin-bottom: 5px;
+}
+
+.users-home li .home-aside p {
+  align-self: flex-end;
+  font-size: 19px;
+  letter-spacing: 0.1em;
+}

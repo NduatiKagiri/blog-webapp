@@ -1,0 +1,24 @@
+.post-detail {
+  width: 100%;
+  padding: 24px 145px;
+}
+
+.post-detail .post {
+  border: 1.5px solid #000;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 12px;
+}
+
+.post-detail .post .post-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.post-detail .post .post-text {
+  letter-spacing: 0.05em;
+  font-size: 19px;
+  margin-bottom: 6px;
+}

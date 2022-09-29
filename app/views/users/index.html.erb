@@ -1,1 +1,26 @@
-<h1>Users Index</h1>
+<div class="user-header">
+  <img src="<%= @user.photo %>" alt="User Image">
+  <div class="user-aside">
+    <h2><%= @user.name %></h2>
+    <p>Number of Posts: <strong><%= @user.posts_counter %></strong></p>
+  </div>
+</div>
+
+<div class="user-bio">
+  <h4>Bio</h4>
+  <p><%= @user.bio %></p>
+</div>
+
+<ul class="user-posts">
+  <% @posts.each do |post| %>
+  <li>
+    <h4><%= post.title %></h4>
+    <p class="post-title"><%= post.text %></p>
+    <p class="post-counts">
+      Comments: <strong><%= post.comments_counter %></strong>,
+      Likes: <strong><%= post.likes_counter %></strong>
+    </p>
+  </li>
+  <% end %>
+  <a class="all-posts-btn" href="/users/<%= @user.id %>/posts">See All Posts</a>
+</ul>
