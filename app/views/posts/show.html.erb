@@ -1,1 +1,25 @@
-<h3>Showing Post</h3>
+<div class="post-detail">
+  <div class="post">
+    <div class="post-top">
+      <h4>'<%= @post.title %>' by <%= @post.author.name %></h4>
+      <p class="post-counts">
+        Comments: <strong><%= @post.comments_counter %></strong>,
+        Likes: <strong><%= @post.likes_counter %></strong>
+      </p>
+    </div>
+    <p class="post-text"><%= @post.text %><%= @post.text %></p>
+    <p class="post-text"><%= @post.text %><%= @post.text %></p>
+    <p class="post-text"><%= @post.text %><%= @post.text %></p>
+    <hr>
+    <ul id="user-post-comments">
+      <% @comments.each do |comment| %>
+      <li>
+        <p>
+          Name: <strong><%= comment.author.name %></strong>,
+          Comment: <strong><%= comment.text %></strong>
+        </p>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

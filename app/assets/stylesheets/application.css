@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+@import "./all.css";
+@import "./home.css";
+@import "./user.css";
+@import "./posts.css";
+@import "./post.css";

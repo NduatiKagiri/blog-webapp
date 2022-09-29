@@ -1,0 +1,16 @@
+.user-posts li .user-post {
+  width: 100%;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+#user-post-comments {
+  padding: 10px 0;
+}
+
+#user-post-comments li {
+  border: none;
+  margin: 0;
+}

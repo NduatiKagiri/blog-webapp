@@ -1,0 +1,100 @@
+.user-header {
+  width: 100%;
+  padding: 24px 145px 5px 145px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-header img {
+  width: 15%;
+  height: 125px;
+}
+
+.user-header .user-aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 18px 12px 10px 12px;
+  width: 80%;
+  border: 2px solid #262626;
+  border-radius: 4px;
+  margin-left: 5%;
+}
+
+.user-header .user-aside h2 {
+  font-size: 32px;
+  line-height: 42px;
+  letter-spacing: 0.1em;
+  margin-bottom: 5px;
+}
+
+.user-header .user-aside p {
+  align-self: flex-end;
+  font-size: 19px;
+  letter-spacing: 0.1em;
+}
+
+.user-bio {
+  width: calc(100% - 290px);
+  margin: 0 145px 12px 145px;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1.5px solid #000;
+  border-radius: 3px;
+}
+
+.user-bio h4 {
+  margin-bottom: 10px;
+}
+
+.user-posts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 145px;
+  margin-top: 24px;
+}
+
+.user-posts li {
+  width: 100%;
+  margin-bottom: 24px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.user-posts li h4 {
+  margin-bottom: 10px;
+}
+
+.user-posts li .post-title {
+  margin-bottom: 5px;
+  font-size: 19px;
+}
+
+.user-posts li .post-counts {
+  align-self: flex-end;
+}
+
+.all-posts-btn {
+  padding: 10px;
+  border: 2px solid #000;
+  font-size: 17px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  margin-top: 12px;
+  align-self: center;
+}
+
+.all-posts-btn:hover {
+  padding: 12px;
+  letter-spacing: 0.1em;
+}
