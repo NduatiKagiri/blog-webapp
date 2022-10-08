@@ -11,6 +11,10 @@
   <p><%= @user.bio %></p>
 </div>
 
+<div class="create-new-post">
+  <a href="/users/<%= @user.id %>/posts/create">Create Post</a>
+</div>
+
 <ul class="user-posts">
   <% @posts.each do |post| %>
   <li>

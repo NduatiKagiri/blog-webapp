@@ -22,3 +22,25 @@
   font-size: 19px;
   margin-bottom: 6px;
 }
+
+.like {
+  align-self: flex-end;
+}
+
+.like .like-btn {
+  border: 1px solid #000;
+  border-radius: 2px;
+  padding: 10px 12px;
+  margin: 12px 0;
+}
+
+.add-comment .comment-area {
+  width: 300px;
+  margin-bottom: 12px;
+}
+
+.comment-button .btn {
+  padding: 10px 20px;
+  border: 1.5px solid #000;
+  border-radius: 2px;
+}

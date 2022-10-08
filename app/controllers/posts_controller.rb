@@ -5,7 +5,19 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:post_id])
+    @post = Post.find(params[:id])
     @comments = @post.comments
+  end
+
+  def new
+    @post = Post.new
+  end
+
+  def create
+    author = current_user
+    post = Post.new(params.require(:post).permit(:title, :text))
+    post.author = author
+    post.save
+    redirect_to user_posts_path(author)
   end
 end

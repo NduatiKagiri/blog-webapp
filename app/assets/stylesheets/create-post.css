@@ -1,0 +1,53 @@
+.create-post {
+  width: 100%;
+  padding: 24px 145px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create-post h3 {
+  margin-bottom: 24px;
+}
+
+#posts-form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-title,
+.form-text {
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-title .form-label,
+.form-text .form-label {
+  width: 18%;
+}
+
+.form-title-input {
+  height: 40px;
+  width: 80%;
+}
+
+.form-text-input {
+  height: 215px;
+  width: 80%;
+}
+
+.form-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-submit .submit-btn {
+  padding: 10px 12px;
+  border: 1px solid #000;
+  border-radius: 2px;
+}

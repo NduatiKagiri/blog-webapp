@@ -11,6 +11,7 @@
     <p class="post-text"><%= @post.text %><%= @post.text %></p>
     <p class="post-text"><%= @post.text %><%= @post.text %></p>
     <hr>
+    <%= render "likes/form" %>
     <ul id="user-post-comments">
       <% @comments.each do |comment| %>
       <li>
@@ -21,5 +22,7 @@
       </li>
       <% end %>
     </ul>
+    <h3>Add A Comment</h3>
+    <%= render "comments/form" %>
   </div>
 </div>
