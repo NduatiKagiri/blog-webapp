@@ -1,0 +1,9 @@
+<%= form_with url: user_post_comments_path(post_id: :id), method: :post, local: true, scope: :comment do |form| %>
+  <div class="add-comment">
+    <%= form.text_area :text, class: 'comment-area' %>
+  </div>
+
+  <div class="comment-button">
+    <%= form.submit "Add Comment", class: 'btn' %>
+  </div>
+<% end %>
