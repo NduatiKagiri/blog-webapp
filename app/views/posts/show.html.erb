@@ -13,7 +13,7 @@
     <hr>
     <%= render "likes/form" %>
     <ul id="user-post-comments">
-      <% @comments.each do |comment| %>
+      <% @post.comments.each do |comment| %>
       <li>
         <p>
           Name: <strong><%= comment.author.name %></strong>,
