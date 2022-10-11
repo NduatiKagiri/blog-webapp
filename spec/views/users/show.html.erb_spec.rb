@@ -6,8 +6,8 @@ RSpec.feature 'User Show Page', type: :feature do
                         photo: 'https://example.com/myimage.png',
                         bio: 'Student at Microverse.')
     @user2 = User.create(name: 'Brenda',
-                        photo: 'https://example.com/myimage.png',
-                        bio: 'Student at Microverse.')
+                         photo: 'https://example.com/myimage.png',
+                         bio: 'Student at Microverse.')
     @first_post = Post.create(author: @user, title: 'Hello 1', text: 'This is my first post')
     @second_post = Post.create(author: @user, title: 'Hello 2', text: 'This is my second post')
     @third_post = Post.create(author: @user, title: 'Hello 3', text: 'This is my third post')
@@ -34,6 +34,26 @@ RSpec.feature 'User Show Page', type: :feature do
   it "I can see the user's bio" do
     expect(page).to have_content('Bio')
   end
+end
+
+RSpec.feature 'User Show Page', type: :feature do
+  before :each do
+    @user = User.create(name: 'John',
+                        photo: 'https://example.com/myimage.png',
+                        bio: 'Student at Microverse.')
+    @user2 = User.create(name: 'Brenda',
+                         photo: 'https://example.com/myimage.png',
+                         bio: 'Student at Microverse.')
+    @first_post = Post.create(author: @user, title: 'Hello 1', text: 'This is my first post')
+    @second_post = Post.create(author: @user, title: 'Hello 2', text: 'This is my second post')
+    @third_post = Post.create(author: @user, title: 'Hello 3', text: 'This is my third post')
+    @fourth_post = Post.create(author: @user, title: 'Hello 4', text: 'This is my fourth post')
+    5.times do |_i|
+      Comment.create(post: @first_post, author: @user2, text: 'Hi John!')
+    end
+
+    visit user_path(@user.id)
+  end
 
   it "I can see the user's first 3 posts" do
     expect(page).to have_content('Hello 1')
@@ -43,6 +63,26 @@ RSpec.feature 'User Show Page', type: :feature do
 
   it "I can see a button that lets me view all of a user's posts" do
     expect(page).to have_content 'See All Posts'
+  end
+end
+
+RSpec.feature 'User Show Page', type: :feature do
+  before :each do
+    @user = User.create(name: 'John',
+                        photo: 'https://example.com/myimage.png',
+                        bio: 'Student at Microverse.')
+    @user2 = User.create(name: 'Brenda',
+                         photo: 'https://example.com/myimage.png',
+                         bio: 'Student at Microverse.')
+    @first_post = Post.create(author: @user, title: 'Hello 1', text: 'This is my first post')
+    @second_post = Post.create(author: @user, title: 'Hello 2', text: 'This is my second post')
+    @third_post = Post.create(author: @user, title: 'Hello 3', text: 'This is my third post')
+    @fourth_post = Post.create(author: @user, title: 'Hello 4', text: 'This is my fourth post')
+    5.times do |_i|
+      Comment.create(post: @first_post, author: @user2, text: 'Hi John!')
+    end
+
+    visit user_path(@user.id)
   end
 
   it "When I click a user's post, it redirects me to that post's show page" do
