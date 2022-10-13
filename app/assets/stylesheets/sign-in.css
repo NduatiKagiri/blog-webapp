@@ -31,16 +31,10 @@
   display: flex;
 }
 
-.sign-in .remember_me input[type = 'checkbox'] {
+.sign-in .remember_me input[type='checkbox'] {
   height: 24px;
   width: 24px;
   margin-right: 12px;
-}
-
-.sign-in .actions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .sign-in .actions {
